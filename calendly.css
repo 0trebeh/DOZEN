@@ -27,7 +27,7 @@
   }
 
   .meeting-card {
-    min-height: 1460px;
+    height: 900px;
     border-radius: 16px;
   }
 }

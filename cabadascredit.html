@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prepárate para tu consulta</title>
+
+    <!-- Tu CSS principal -->
+    <link rel="stylesheet" href="./landing.css" />
+    <link rel="stylesheet" href="./profiles.css" />
+</head>
+
+<body>
+
+    <main class="consulta-page green-glow">
+        <div class="consulta-inner">
+
+            <span class="eyebrow">Consulta personalizada</span>
+
+            <h1 class="consulta-title">
+                ¡Prepárate para <br />
+                <span>tu consulta!</span>
+            </h1>
+
+            <p class="consulta-subtitle">
+                Mira este video primero
+            </p>
+
+            <div class="video-card">
+                <div class="video-wrapper" onclick="togglePlay()">
+                    <video id="heroVideo" playsinline>
+                        <source src="https://res.cloudinary.com/dgutnxfud/video/upload/v1780261748/corporate_vocnqd.mp4"
+                            type="video/mp4">
+                    </video>
+
+                    <button class="video-toggle" id="videoToggle">
+                        <svg class="icon-play" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+
+                        <svg class="icon-pause" viewBox="0 0 24 24">
+                            <path d="M6 5h4v14H6zm8 0h4v14h-4z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="consulta-actions" id="agendar">
+                <a href="https://calendly.com/" target="_blank" class="consulta-btn">
+                    Agendar consulta
+                </a>
+            </div>
+
+            <p class="consulta-note">
+                Antes de agendar, mira el video completo para llegar preparado.
+            </p>
+
+        </div>
+    </main>
+
+    <!-- ============ RESULTADOS ============ -->
+    <section id="resultados" class="section section-alt resultados">
+        <div class="resultados-glow"></div>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow" data-es="Resultados" data-en="Results">Resultados</span>
+                <h2 class="section-title"><span data-es="Data real." data-en="Real data.">Data real.</span> <span
+                        class="italic" data-es="Casos reales" data-en="Real cases">Casos reales</span>.</h2>
+                <p class="section-sub"
+                    data-es="Métricas agregadas de nuestro sistema. Resultados individuales pueden variar según el perfil inicial."
+                    data-en="Aggregate metrics from our system. Individual results may vary based on the initial profile.">
+                    Métricas agregadas de nuestro sistema. Resultados individuales pueden variar según el perfil
+                    inicial.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">+187<span class="stat-suffix">pts</span></div>
+                    <p class="stat-label">FICO AVG Lift</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">99<span class="stat-suffix">%</span></div>
+                    <p class="stat-label">Removal Rate</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">$877K<span class="stat-suffix">+</span></div>
+                    <p class="stat-label" data-es="Funding Desplegado" data-en="Funding Deployed">Funding Desplegado</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">670</div>
+                    <p class="stat-label" data-es="Perfiles Activos" data-en="Active Profiles">Perfiles Activos</p>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text"
+                        data-es="Pasé de 540 a 742 en 4 meses. Por primera vez un sistema que explica cada paso con datos."
+                        data-en="I went from 540 to 742 in 4 months. For the first time, a system that explains every step with data.">
+                        Pasé de 540 a 742 en 4 meses. Por primera vez un sistema que explica cada paso con datos.</p>
+                    <div class="testimonial-foot">
+                        <p class="testimonial-author">— M. Ramírez</p>
+                        <p class="testimonial-loc">Houston, TX</p>
+                        <p class="testimonial-result">540 → 742 · +202 pts</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text"
+                        data-es="Lanzamos la LLC con $125K en líneas 0%. D Ozen literalmente desbloqueó el negocio."
+                        data-en="We launched the LLC with $125K in 0% lines. D Ozen literally unlocked the business.">
+                        Lanzamos la LLC con $125K en líneas 0%. D Ozen literalmente desbloqueó el negocio.</p>
+                    <div class="testimonial-foot">
+                        <p class="testimonial-author">— J. Cortez</p>
+                        <p class="testimonial-loc">Miami, FL</p>
+                        <p class="testimonial-result">Funding: $125,000 · 0% APR</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote-mark">"</div>
+                    <p class="testimonial-text"
+                        data-es="Bancarrota, 9 colecciones, 2 charge-offs. Hoy: reporte limpio y casa aprobada."
+                        data-en="Bankruptcy, 9 collections, 2 charge-offs. Today: clean report and home approved.">
+                        Bancarrota, 9 colecciones, 2 charge-offs. Hoy: reporte limpio y casa aprobada.</p>
+                    <div class="testimonial-foot">
+                        <p class="testimonial-author">— A. Thompson</p>
+                        <p class="testimonial-loc">Los Angeles, CA</p>
+                        <p class="testimonial-result">11 items removed · Mortgage approved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">D OZEN</div>
+            <p class="footer-disclaimer"
+                data-es="AVISO: D Ozen no es una firma legal ni una institución financiera. Resultados individuales pueden variar."
+                data-en="NOTICE: D Ozen is not a law firm nor a financial institution. Individual results may vary.">
+                AVISO: D Ozen no es una firma legal ni una institución financiera. Resultados individuales pueden
+                variar.</p>
+            <p class="footer-copy">© 2026 D OZEN — <span data-es="Todos los Derechos Reservados"
+                    data-en="All Rights Reserved">Todos los Derechos Reservados</span></p>
+        </div>
+    </footer>
+
+    <script src="videos.js"></script>
+    <script>
+        document.addEventListener("contextmenu", e => e.preventDefault());
+    </script>
+</body>
+
+</html>

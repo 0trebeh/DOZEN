@@ -1,0 +1,123 @@
+:root {
+  --scale: 1.3;
+}
+
+.img-bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("https://m.media-amazon.com/images/I/71hS5RlM-3L.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero {
+  display: flex;
+  min-height: 300dvh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 32px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.h-board {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 55%;
+  transform: translateY(-50%);
+  gap: 26px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.h-card {
+  border: 1px solid transparent;
+  border-radius: 24px;
+  width: clamp(380px, 24vw, 400px);
+  aspect-ratio: 400 / 372;
+  padding: clamp(24px, 2.5vw, 39px) clamp(20px, 2vw, 33px) clamp(20px, 2vw, 31px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(12px);
+
+  background:
+    radial-gradient(
+      500px circle at var(--x,50%) var(--y,50%),
+      rgba(8,180,12,calc(var(--glow-opacity,0) * .28)),
+      transparent 50%
+    ),
+    rgb(3 3 3 / 70%);
+  transition: background-color 1.2s ease;
+}
+
+.h-card:hover {
+  border: #164c00;
+  background: rgb(3 3 3 / 90%);
+}
+
+.h-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+
+  background: radial-gradient(
+    180px circle at var(--x, 50%) var(--y, 50%),
+    #08b40c,
+    transparent 99%
+  );
+
+  mask: linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+
+  pointer-events: none;
+  opacity: var(--glow-opacity, 0);
+}
+
+.h-logo {
+  height: calc(60px * var(--scale));
+  width: auto;
+  max-width: 80%;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 6px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.h-gauge {
+  width: clamp(350px, 24vw, 400px);
+  height: clamp(350px, 24vw, 400px);
+  display: block;
+}
+
+.h-label {
+  color: #34c759;
+  font-size: calc(18px * var(--scale));
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  margin-top: 2px;
+}
+
+@media (max-width: 1134px) {
+  .card-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-2 {
+    display: none;
+  }
+}
